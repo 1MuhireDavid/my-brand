@@ -1,0 +1,58 @@
+// NAME:   MUHIRE DAVID
+// REG NO: 221001399
+// DATE 03/12/2022
+
+#include <stdio.h>
+#include <stdint.h>
+int main(){
+	FILE *fp;
+	int i;
+	int id;
+	char fname[50];
+	char sname[50];
+	int age;
+        int salary;
+	fp = fopen("C:\\Employee.txt","a+");
+     	fputs("NO", fp);
+     	fputs("\t", fp);
+		fputs("Id", fp);
+		fputs("\t", fp);
+		fputs("first name", fp);
+		fputs("\t", fp);
+		fputs("second name", fp);
+		fputs("\t", fp);
+		fputs("Ages", fp);
+		fputs("\t", fp);
+		fputs("salary", fp);
+		fputs("\n", fp);
+	for(i = 0 ; i <10; i++){
+		printf("Enter your Id of %d \n",i+1);
+		scanf("%d",&id);
+		printf("Enter your firstname of %d \n",i+1);
+		scanf("%s",fname);
+		printf("Enter your secondname of %d \n",i+1);
+		scanf("%s",sname);
+		printf("Enter your age of %d \n",i+1);
+		scanf("%d",&age);
+        printf("Enter employees salary of %d \n",i+1);
+		scanf("%d",&salary);
+	
+	 
+	    fprintf(fp,"%d",i+1);
+	    fputs("\t", fp);
+		fprintf(fp,"%d",id);
+		fputs("\t", fp);
+		fputs(fname, fp);
+		fputs("\t\t", fp);
+		fputs(sname, fp);
+		fputs("\t\t", fp);
+		fprintf(fp,"%d",age);
+		fputs("\t", fp);
+        fprintf(fp,"%d",salary);
+		fputs("\n", fp);
+		
+	}
+	
+	fclose(fp);
+	return 0;
+}

@@ -1,0 +1,134 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-color: #EEEEEE;
+}
+.nav {
+    background-color: #682424;
+    width:100%;
+}
+.nav-item button{
+background-color: rgba(255, 255, 255, 0);
+border: none;
+}
+ul {
+    list-style-type: none;
+    display: inline-flex;
+    position: relative;
+    left: 45%;
+    bottom: 24px;
+    
+}
+.nav-item li a{
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: bold;
+    margin: 10px;
+    color:white;
+}
+.nav img{
+    padding-top: 5px;
+    margin-left: 15px;
+    border-radius: 20px;
+    width: 5%;
+}
+.column button{
+    margin:14em 0em 5em 0em;
+    background-color: #682424;
+    color: white;
+    border-radius: 1em;
+    width:10em;
+    height: 2.5em;
+    font-weight: 600;
+}
+h2{
+    text-align: center;
+}
+h5 h3{
+    font-family: 'poppins';
+    
+}
+h3{
+    font-size: 2em;
+    padding-top: 0.2em;
+}
+.row{
+    display: flex;
+    height:100vh;
+    background: #EEEEEE;
+    align-items: center;
+    justify-content: center;
+}
+.column{
+  /**  flex:50%;
+    padding-left: 2em;
+**/
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    background: #EEEEEE;
+    margin: 0 15px;
+    padding: 10px 20px;
+}
+.column .skill-box{
+    width: 100%;
+    margin: 25px 0;
+    
+}
+.skill-box .title{
+    display: block;
+    font-size: 1.2em;
+    font-weight: bold;
+    color:#000;
+}
+.skill-box .skill-bar{
+    height: 1em;
+    width: 100%;
+    margin-top: 6px;
+    background: rgba(0,0,0,0.1);
+}
+.skill-bar .skill-per{
+    position: relative;
+    display: block;
+    height: 90%;
+    background: #682424;
+
+}
+.skill-per.skill-per.javascript{
+    width:60%;
+    }
+.skill-per.css{
+width:70%;
+     }
+.skill-per.c{
+    width:85%;
+     }
+.skill-per.html{
+        width:80%;
+     }    
+.skill-per .tooltip{
+    position: absolute;
+    right: -14px;
+    top: -28px;
+    font-size: 9px;
+    font-weight: 500;
+    color: #ffffff;
+    padding: 2px 6px;
+    background: #682424;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

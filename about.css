@@ -31,17 +31,21 @@ ul {
     border-radius: 20px;
    width: 5%;
 }
-.container{
+.row{
     display: flex;
-    /**grid-template-columns: 2fr 1fr;**/
+    width:100%;
 }
-.container img{
-    width:60%;
+.imgcol{
+width:55%;
+padding-left: 5em;
 }
-.text{
- margin: 5em 5em 5em -35em;
+img{
+    height: 90%;
 }
-
-
-
-
+.textcol{
+    width:45%;
+    margin: 10em 10em 0em -10em;
+}
+h2{
+    
+}

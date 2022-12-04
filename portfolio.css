@@ -31,17 +31,18 @@ ul {
     border-radius: 20px;
    width: 5%;
 }
-.container{
+.row{
     display: flex;
-    /**grid-template-columns: 2fr 1fr;**/
 }
-.container img{
-    width:60%;
+.column{
+    flex:50%;
+    padding: 1em 0em 0em 2em;
+    margin: auto;
 }
-.text{
- margin: 5em 5em 5em -35em;
-}
-
-
-
-
+.column img{
+    width:30em;
+    height: 15em;
+  }
+  h2{
+    text-align: center;
+  }
