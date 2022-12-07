@@ -1,46 +1,62 @@
 *{
-    margin:0;
-    padding:0;
+  padding: 0;
+  margin:0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
 }
-.nav {
-    background-color: #682424;
-    width:100%;
+nav{
+  background: #682424;
+  height: 80px;
+  width:100%;
 }
-.nav-item button{
-background-color: rgba(255, 255, 255, 0);
-border: none;
+nav img{
+  line-height: 80px;
+  padding: .4em 15px;
+  height: 80px;
+  border-radius: 4em;
+
 }
-ul {
-    list-style-type: none;
-    display: inline-flex;
-    position: relative;
-    left: 45%;
-    bottom: 24px;
-    
+nav ul{
+  float: right;
+  margin-right: 20px;
 }
-.nav-item li a{
-    text-decoration: none;
-    font-size: 19px;
-    font-weight: bold;
-    margin: 10px;
-    color:white;
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0px0 5px;
 }
-.nav img{
-    padding-top: 5px;
-    margin-left: 15px;
-    border-radius: 20px;
-   width: 5%;
+nav ul li a{
+  color: white;
+  padding: 7px 13px;
+  font-size: 17px;
+}
+nav button{
+  background-color: #682424;
+  border: none;
+}
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+display: none;
 }
 body{
     background-color: #EEEEEE;
+
 }
 .login-form {
   background-color: #ffffff;
-  margin: auto;
+  margin: -2em auto;
   width: 50%;
-  box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.363);
-  padding: 0.1px 0 0 0;
-  
+  box-shadow: 5px 10px 2px rgba(0, 0, 0, 0.363);
+  height: 70vh;
   }
   
   h1 {
@@ -53,7 +69,7 @@ body{
     height: 20vw;
     max-width: 500px;
     min-width: 300px;
-    margin: auto;
+    margin: 0 auto;
     padding-bottom: 2em;
 
   }
@@ -63,19 +79,17 @@ body{
     padding: 2rem 0;
   }
   
-  fieldset:last-of-type {
-    border-bottom: none;
-  }
   
   label {
     display: block;
-    margin: 0.5rem 0;
+    margin-top: 0.5rem;
     font-weight: bold;
+    padding:0 3em 0 3em;
   }
   
   input {
     margin: 10px 0 0 0;
-    width: 80%;
+    width: 100%;
     min-height: 2em;
   }
   
@@ -83,19 +97,18 @@ body{
      background-color: #EEEEEE;
     color:rgba(0, 0, 0, 0.295);
     border-radius: 0.5em;
-
-
   }
   
   input[type="submit"] {
     display: block;
     width: 80%;
-    margin: 1px 0 0 0;
+    margin-top: 1px;
+    margin-left: 2.5em;
     height: 2em;
     font-size: 1.1rem;
     background-color: #682424;
     border-color: white;
-    min-width: 300px;
+    min-width: 200px;
     color:#ffffff;
   }
   

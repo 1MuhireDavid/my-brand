@@ -1,39 +1,52 @@
 *{
+    padding: 0;
     margin:0;
-    padding:0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
 }
-body{
-    background-color: #EEEEEE;
-}
-.nav {
-    background-color: #682424;
+nav{
+    background: #682424;
+    height: 80px;
     width:100%;
 }
-.nav-item button{
-background-color: rgba(255, 255, 255, 0);
-border: none;
+nav img{
+    line-height: 80px;
+    padding: .4em 15px;
+    height: 80px;
+    border-radius: 4em;
+
 }
-ul {
-    list-style-type: none;
-    display: inline-flex;
-    position: relative;
-    left: 45%;
-    bottom: 24px;
-    
+nav ul{
+    float: right;
+    margin-right: 20px;
 }
-.nav-item li a{
-    text-decoration: none;
-    font-size: 19px;
-    font-weight: bold;
-    margin: 10px;
-    color:white;
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0px0 5px;
 }
-.nav img{
-    padding-top: 5px;
-    margin-left: 15px;
-    border-radius: 20px;
-    width: 5%;
+nav ul li a{
+    color: white;
+    padding: 7px 13px;
+    font-size: 17px;
 }
+nav button{
+    background-color: #682424;
+    border: none;
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  #check{
+  display: none;
+  }
 .column button{
     margin:14em 0em 5em 0em;
     background-color: #682424;
