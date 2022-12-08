@@ -63,9 +63,10 @@ display: none;
   }
   .column a{
     text-decoration: none;
-    color: black;
-    background-color: rgb(224, 224, 21);
-    padding: .5em;
+    color: white;
+    background-color: #682424;
+    padding: .9em;
+    margin-top: 4em;
     border-radius: .5em;
   }
   .column{
