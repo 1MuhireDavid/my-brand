@@ -62,6 +62,104 @@ img{
     width:45%;
     margin: 10em 10em 0em -10em;
 }
-h2{
+@media screen AND (max-width: 540px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #682424;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+
+
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    #check:checked ~ ul {
+        left: 0;
+    }
+    .textcol{
+        margin: 0 auto;
+        font-size: 1.5em;
+        width: 100%;
+        padding: 1em;
+    }
+
+
+
+    .row{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .imgcol img{
+        margin-left: -4em;
+    }
+
+    
+}
+
+@media screen AND (max-width: 414px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #682424;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+
+
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    #check:checked ~ ul {
+        left: 0;
+    }
+    .textcol{
+        margin: 0 auto;
+        font-size: 1.5em;
+        width: 100%;
+        padding: 1em;
+    }
+
+
+
+    .row{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .imgcol {
+        width: 100%;
+    }
+    .imgcol img{
+        width: 100%;
+    }
+    .textcol{
+        font-size: 1.2em;
+    }
+
     
 }
