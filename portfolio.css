@@ -73,14 +73,11 @@ nav button{
     nav ul li a{
         font-size: 16px;
     }
-    .rows{
-
-    }
+<<<<<<< Updated upstream
+=======
+    
+>>>>>>> Stashed changes
 }
-
-
-
-
   @media (max-width: 850px){
     .checkbtn{
         display: block;
@@ -94,7 +91,6 @@ nav button{
         left: -100%;
         text-align: center;
         transition: all .5s;
-
 
     }
     nav ul li{
