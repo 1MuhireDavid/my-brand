@@ -56,19 +56,29 @@ display: none;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     /* background-color: #682424; */
+    padding: 1em;
   }
-  .column img{
+  .column1 img{
+    width: 100%;
+    height: 70%;
+    
+  }
+  .column2 img{
     width: 100%;
     height: 70%;
   }
-  .column a{
+  .column3 img{
+    width: 100%;
+    height: 70%;
+  }
+  .row a{
     text-decoration: none;
-    color: black;
-    background-color: rgb(224, 224, 21);
+    color: white;
+    background-color: #682424;
     padding: .5em;
     border-radius: .5em;
   }
-  .column{
+  .row{
     text-align: center;
   }
 h2{
@@ -98,4 +108,36 @@ h2{
       height: 70%;
     }
     
+  }
+  @media (max-width: 414px){  
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #682424;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    #check:checked ~ ul {
+        left: 0;
+    }
+    h2{
+      font-size: 1.6em;
+    }
+    .row{
+      gap: 2em;
+    }
   }
