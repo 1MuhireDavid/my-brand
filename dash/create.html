@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>DashBoard</title>
+    <!-- font family link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    
+    <!-- icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+
+
+</head>
+<body>
+   <!-- header -->
+   <nav>
+    <input type="checkbox" id="check"/>
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>      
+    </label>
+    <img src="/images/logo.jpg" alt="">
+        <ul>
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>    
+        <li><a href="portifolio.html">Portfolio</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="contact.html">Contact Me</a></li>
+        <li><button><a href="login.html">Logout</a></button></li>
+    </ul>
+</nav>
+  <!-- End Header -->
+
+    <div class="container">
+              <!-- Side bar -->
+      <div class="left-side">        
+        <aside id="sidebar">
+             <div class="nav">
+              <ul class="sidebar-list">
+                <li><a href="../../my-brand/dash/dashboard.html">DashBoard</a></li>
+                <li><a href="../../my-brand/dash/create.html">Create Blog</a></li>                               
+              </ul>
+            </div>
+        </aside>
+      </div>
+        <!-- End of sidebar -->
+
+        <!-- main -->
+        <div class="main">
+        <main class="main-content">
+            <div class="admin-content">
+                <!-- <div class="button-group">
+                  <a href="create.html" class="btn btn-blog">Add Blog</a>
+                  <a href="index.html" class="btn btn-blog">Manage Blog</a>
+                </div> -->
+          
+                <div class="content">
+                  <h2 class="page-title">Add blog</h2>
+          
+                  <form action="create.html" method="post">
+                      <div>
+                          <label for="">Title</label>
+                          <input type="text" name="title" class="text-input">
+                      </div>
+                      <div>
+                          <label for="">Description</label><textarea name="body">
+          
+                          </textarea>
+                      </div>
+                      <div>
+                          <label>Blog picture</label>
+                          <input type="file" name="pic" id="">
+                      </div>
+                      <div>
+                          <button type="submit" class="btn btn-big">Add Blog</button>
+                      </div>          
+                  </form>         
+          
+                </div>
+              </div>
+          
+        </main></div>
+        <!-- End of main -->
+  
+
+
+
+
+    </div>
+    <script src="/dash/scripts.js"></script>
+</body>
+</html>
