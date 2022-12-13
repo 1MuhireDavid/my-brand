@@ -5,6 +5,8 @@
     list-style: none;
     box-sizing: border-box;
 }
+/* ========================= navbar style ========================== */
+
 nav{
     background: #682424;
     height: 80px;
@@ -47,6 +49,10 @@ nav button{
   #check{
   display: none;
   }
+
+/* ========================= navbar style ========================== */
+
+
 .row{
     display: flex;
     width:100%;

@@ -1,9 +1,7 @@
-body{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: white;
-    color: white;
 }
 
 /* ============= icons =============== */
@@ -11,6 +9,59 @@ body{
     vertical-align: middle;
     line-height: 1px;
 }
+
+/* =============== navbar =================== */
+nav{
+    background: #4d1b1b;
+    height: 80px;
+    width:100%;
+}
+nav img{
+    line-height: 80px;
+    padding: .4em 15px;
+    height: 80px;
+    border-radius: 4em;
+
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0px0 5px;
+}
+nav button:hover {
+background-color: #e66868;
+border-radius: 10px;
+height: 30px;
+transition: 1s;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    padding: 7px 13px;
+    font-size: 17px;
+}
+nav button{
+    background-color: #4d1b1b;
+    border: none;
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  #check{
+  display: none;
+  }
+
+/* =============== End navbar =================== */
 /* ========== text font============= */
 
 .text-primary{
@@ -36,38 +87,172 @@ body{
 
 
 .container{
-    display: grid;
-    grid-template-columns: 260px 1fr 1fr 1fr;
-    grid-template-rows: 0.2fr 3fr;
-    grid-template-areas:
-    "sidebar header header header"
-    "sidebar main main main"; 
-    height: 100vh;
-}
-
-/* --------------- header----------------- */
-.header{
-    grid-area: header;
-    height: 70px;
-    background-color: #682424;
+    margin: 0;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 30px 0 30px;
-    box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
-
+    height: calc(100%-66px);
+    width: 100%;
 }
+
 
 /* --------------- SIDE BAR----------------- */
 
-#sidebar {
-    grid-area: sidebar;
-    height: 100%;
-    background-color: gray;
+.left-side{
+    display: block;
+    padding-top: 2rem;
+    flex: 2;
+    background-color: #682424;
+    height: 87.8vh;
+}
+/* ============================= sidebar-list ===============  */
+
+.left-side #sidebar .nav  ul li a{
+text-decoration: none;
+color: #EEEEEE;
+}
+.left-side #sidebar .nav ul{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    list-style: none;
+    padding: 2em;
 }
 
+
 /* --------------- MAIN----------------- */
-.main-container{
-    grid-area: main;
-    background-color: beige;
+.main{
+    flex: 8;
+    width: 100%;
+    overflow-y: auto;
+    /* padding: 20px 20px; */
+}
+/* =============== dashboard content ======================== */
+h2{
+    color: black;
+    padding-left: 1em;
+}
+.admin-content{
+        /* padding: 40px 100px 100px; */
+        overflow-y: auto;
+        color: black;
+        width: 90%;
+    }
+    
+    .page-title{
+        text-align: center;
+        margin-bottom:  1.5rem;
+    }
+    
+    /* =========== table designs ===============  */
+    table{
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 1.1rem;      
+    }
+    
+    th, td {
+        padding: 15px;
+        text-align: left;
+        border-bottom: 1px solid #d3d3d3;
+        
+    }
+
+    /* =========== END table designs ===============  */
+
+
+    .edit {
+        color: green;
+    }
+    .delete {
+        color: red;
+    }
+    .save {
+        color: blue;
+    }
+    form div{
+        margin-bottom: 15px;
+    }
+
+
+    /* ================= form styles ======== */
+    .form div, textarea{
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+        justify-content: start;
+        width: 60vw;
+    }
+    input, textarea {
+        background-color: #F6F6F6;
+        
+        color: black;
+        border-radius: 5px;
+        border: none;
+        width: 60%;
+        margin: 0em auto;
+        outline: none;
+      }
+      input{
+        line-height: 2em;
+
+      }
+      nav button{
+        color: white;
+      }
+      
+     .form button[type="submit"] {
+        display: block;
+        width: 40%;
+        margin: 1em auto;
+        height: 2em;
+        font-size: 1.1rem;
+        background-color: #682424;
+        border-color: white;
+        min-width: 300px;
+        border-radius: 10px;
+        color: white;
+        
+      }
+      form label {
+        display: block;
+        margin: 0rem 0;
+        color: black;
+        font-weight: bold;
+      }
+
+      /* ==============   index styles */
+.index-card{
+    margin: 3em;
+
+    display: flex;
+    gap: 1em;
+    width: 50%;
+    }
+    .cards{
+        width: 50%;
+        background-color: #d3d3d3;
+        border-radius: 0.5em;
+        padding: 1em;
+    }
+    .cards p{
+        align-items: center;
+        justify-content: center;
+        padding-left: 2em;
+    }
+    .cards h3{
+        align-items: center;
+        justify-content: center;
+        padding-left: .9em;
+        cursor: pointer;
+        
+    }
+
+/* ============== table js styles ==============*/
+.btn-warning{
+    background-color: rgb(201, 201, 30);
+    width: 60px;
+}
+.btn-danger{
+    background-color: rgb(168, 36, 36);
+    color: white;
+    width: 60px;
 }
