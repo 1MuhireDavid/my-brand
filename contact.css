@@ -112,13 +112,14 @@ display: none;
     margin: 10px 0 0 0;
     width: 100%;
     min-height: 2em;
+    border: none;
   }
+
   
   input, textarea {
     background-color: F6F6F6;
     
-    color: #f6f6f6;
-    border-radius: 1em;
+    color: black;
     border: none;
   }
   

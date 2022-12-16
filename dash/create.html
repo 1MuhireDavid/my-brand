@@ -27,12 +27,6 @@
     </label>
     <img src="/images/logo.jpg" alt="">
         <ul>
-        <li><a href="homepage.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="skills.html">Skills</a></li>    
-        <li><a href="portifolio.html">Portfolio</a></li>
-        <li><a href="blogs.html">Blogs</a></li>
-        <li><a href="contact.html">Contact Me</a></li>
         <li><button><a href="login.html">Logout</a></button></li>
     </ul>
 </nav>
@@ -44,8 +38,9 @@
         <aside id="sidebar">
              <div class="nav">
               <ul class="sidebar-list">
-                <li><a href="../../my-brand/dash/dashboard.html">DashBoard</a></li>
-                <li><a href="../../my-brand/dash/create.html">Create Blog</a></li>                               
+                <li><a href="/dash/index.html">DashBoard</a></li>                             
+                <li><a href="/dash/create.html">Manage Blog</a></li>                               
+                <li><a href="/dash/create.html">Create Blog</a></li>                               
               </ul>
             </div>
         </aside>
@@ -62,24 +57,24 @@
                 </div> -->
           
                 <div class="content">
-                  <h2 class="page-title">Add blog</h2>
+                  <h2 class="page-title">Create new blog</h2>
           
                   <form action="create.html" method="post">
                       <div>
                           <label for="">Title</label>
-                          <input type="text" name="title" class="text-input">
+                          <input type="text" name="title" class="text-input" id="title">
                       </div>
                       <div>
-                          <label for="">Description</label><textarea name="body">
+                          <label for="">Description</label><textarea name="body" id="description">
           
                           </textarea>
                       </div>
                       <div>
                           <label>Blog picture</label>
-                          <input type="file" name="pic" id="">
+                          <input type="file" name="pic" id="pic">
                       </div>
                       <div>
-                          <button type="submit" class="btn btn-big">Add Blog</button>
+                          <button type="submit" class="btn btn-big" id="save">Add Blog</button>
                       </div>          
                   </form>         
           

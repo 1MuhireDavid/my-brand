@@ -39,7 +39,7 @@ nav ul li a{
     font-size: 17px;
 }
 nav button{
-    background-color: #682424;
+    background-color: #4d1b1b;
     border: none;
 }
 .checkbtn{
@@ -98,10 +98,7 @@ nav button{
     height: 87.8vh;
 }
 /* ============================= sidebar-list ===============  */
-.left-side #sidebar .nav{
-    
-    
-}
+
 .left-side #sidebar .nav  ul li a{
 text-decoration: none;
 color: #EEEEEE;
@@ -113,7 +110,6 @@ color: #EEEEEE;
     list-style: none;
     padding: 2em;
 }
-
 
 
 /* --------------- MAIN----------------- */
@@ -170,4 +166,71 @@ h2{
         margin-bottom: 15px;
     }
 
-    
+
+    /* ================= form styles ======== */
+    form div{
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+    justify-content: start;
+    width: 60vw;
+    }
+    input, textarea {
+        background-color: #F6F6F6;
+        line-height: 1.6em;
+        color: black;
+        border-radius: 1em;
+        border: none;
+        width: 60%;
+        margin: 0em auto;
+      }
+      
+      
+     form button[type="submit"] {
+        display: block;
+        width: 40%;
+        margin: 1em auto;
+        height: 2em;
+        font-size: 1.1rem;
+        background-color: #682424;
+        border-color: white;
+        min-width: 300px;
+        border-radius: 4em;
+        color: white;
+        
+      }
+      form label {
+        display: block;
+        margin: 0rem 0;
+        color: black;
+        font-weight: bold;
+      }
+
+      /* ==============   index styles */
+.index-card{
+    margin: 3em;
+
+    display: flex;
+    gap: 1em;
+    width: 50%;
+    }
+    .cards{
+        width: 50%;
+        background-color: #d3d3d3;
+        border-radius: 0.5em;
+        padding: 1em;
+    }
+    .cards p{
+        align-items: center;
+        justify-content: center;
+        padding-left: 2em;
+    }
+    .cards h3{
+        align-items: center;
+        justify-content: center;
+        padding-left: .9em;
+        cursor: pointer;
+        
+    }
+
+
