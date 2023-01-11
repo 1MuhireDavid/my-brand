@@ -2,11 +2,11 @@ var names=document.getElementById("names");
 var email=document.getElementById("email");
 var content=document.getElementById("content");
 
-var save_value=document.getElementById("save");
-var localstorage_value=document.getElementById("localstorage_value");
-var read_localstorage=document.getElementById("read_localstorage");
-var delete_data=document.getElementById("delete_data");
-var read_all_data=document.getElementById("read_all_data");
+ var save_value=document.getElementById("save");
+ var localstorage_value=document.getElementById("localstorage_value");
+// var read_localstorage=document.getElementById("read_localstorage");
+// var delete_data=document.getElementById("delete_data");
+// var read_all_data=document.getElementById("read_all_data");
 
 
 
@@ -15,53 +15,52 @@ save_value.onclick=function(){
     alert("Please make sure you have entered data in all fields")
     return false
     }else{
-        localStorage.setItem(names.value,email.value,content.value);
+        save();
+        //localStorage.setItem(names.value,email.value,content.value);
     }
     
 }
+feedback = [];
+getData();
+function getData(){
+    let Data = localStorage.getItem("feedback");
+    if (Data) {
+        feedback = JSON.parse(Data);
+    } else {
+        setData();
+    };
+};
+function setData() {
+    localStorage.setItem("feedback", JSON.stringify(feedback));
+};
 
+function save() {
+  
+        let email = document.getElementById("email");
+        let content = document.getElementById("content");
+        let name = document.getElementById("names")
 
-//========================not needed====================================================
+        let data = {
+            email: email.value,
+            content: content.value,
+            name: name.value
+        };
+        feedback.push(data);
+        setData();
+    
+        // console.log(details)
+        // console.log(email.value)
+        //table();
+        email.value = "";
+        content.value = "";
+        name.value = "";
+    };
+    function deleteData(index) {
+        feedback.splice(index, 1);
+        setData();
+        table();
+    
+        // console.log('delete work')
+        // console.log(details)
+    };
 
-// read_localstorage.onclick=function(){
-//     localstorage_value.textContent=localStorage.getItem("name");
-// }
-// delete_data.onclick=function(){
-//     localStorage.removeItem("name");
-// }
-
-
-//=========================needed=====================================================
-
-
-read_all_data.onclick=function(){
-    var keys=Object.keys(localStorage);
-    console.log(keys);
-
-    for(var key of keys){
-        console.log("Key : "+keys+" :Value : "+localStorage.getItem(key));
-    }
-}
-
-function sort(array){
-    var t, min, i, j;
-    var newarr = new array();
-
-for(i=0;i<array.length;i++){
-     min=i;
-    for(j=i+1;j<array.length;j++){
-    if(array[j] > array[min])
-     {
-    // min=j;
-    newarr.push(array[j])
-     }
-    // t=array[i];
-    // array[i]=array[min];
-    // array[min]=t;
-    }
-
-    }
-    for(i=0;i<newarray.length;i++)
-       console.log(newarray[i]);
-    }
-console.log(sort([23,4,56,7,8,9,89]))

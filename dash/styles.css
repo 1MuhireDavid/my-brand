@@ -115,6 +115,11 @@ color: #EEEEEE;
     gap: 2em;
     list-style: none;
     padding: 2em;
+    
+}
+.left-side #sidebar .nav ul li a:hover{
+    transition: 1s;
+    color: rgb(3, 16, 41);
 }
 
 
@@ -250,9 +255,17 @@ h2{
 .btn-warning{
     background-color: rgb(201, 201, 30);
     width: 60px;
+    border: none;
 }
 .btn-danger{
     background-color: rgb(168, 36, 36);
     color: white;
     width: 60px;
+    border: none;
+
+}
+/* =========== img dynamic ============ */
+table img{
+    width: 40%;
+    height: 40%;
 }

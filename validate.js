@@ -1,4 +1,5 @@
-  document.getElementById("validate").addEventListener("click",loginValidate)
+  document.getElementById("validate").addEventListener("click",loginValidate);
+  document.getElementById("save").addEventListener("click",contactValidate);
 
 function loginValidate(e){
     e.preventDefault();
@@ -9,12 +10,6 @@ function loginValidate(e){
         
     if(password == null || password == ''){
         if(emailId == null || emailId == '', password == null || password == ''){
-            // m.toast({
-            //     html:'Please fill in all fields'
-            // });
-    
-        console.log("hello")
-            // return false;
             alert("Please enter all fields")
             return false
         }
@@ -35,38 +30,36 @@ function loginValidate(e){
     
 }
 
+function contactValidate(e){
+    e.preventDefault();
+    var emailId = document.getElementById("email").value
+    var name = document.getElementById("names").value
+    var content = document.getElementById("content").value
 
 
-
-
-
-
-// function loginValidate(e){
-//     e.preventDefault();
-//     var emailId = document.getElementById("email").value
-//     var password = document.getElementById("pass").value
-
-//     if(emailId == null || emailId == ''){
+    if(emailId == null || emailId == '', content == null || content == '', name == null || name == ''){   
+    if(emailId == null || emailId == ''){
+        alert("Email field should not be blank")
+        return false 
+    }
         
-//     if(password == null || password == ''){
-//         if(emailId == null || emailId == '', password == null || password == ''){
-//             // m.toast({
-//             //     html:'Please fill in all fields'
-//             // });
+    else if(content == null || content == ''){
+        alert("Please enter password field")
+            console.log("password not entered")
+            return false 
+    }
+    else{
+        alert("Please enter password field")
+            console.log("password not entered")
+            return false 
+    }
+
+
+            
+        }
+        else{
+            // alert("Please enter all fields")
+            return true
+        }          
     
-//             // return false;
-//             alert("Please enter all fields")
-//             return false
-//         }
-//      else {
-//             alert("Please enter password field")
-//             console.log("password not entered")
-//              return false   
-//         }
-//     }else {
-//         alert("Please enter email field")
-//     return false
-//     }
-//         }    
-    
-// }
+}

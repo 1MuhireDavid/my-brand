@@ -37,3 +37,12 @@ function table() {
     document.getElementById("table").innerHTML = table;
 };
 table();
+
+//=============================================logout=================
+
+
+function logout(){
+    window.setTimeout(function(){
+      window.location.href="../homepage.html";
+  },5000);
+  }
