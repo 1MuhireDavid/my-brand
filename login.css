@@ -94,7 +94,7 @@ body{
   input {
      background-color: #EEEEEE;
     color:rgba(0, 0, 0, 0.295);
-    border-radius: 0.5em;
+    border-radius: 8px;
   }
   
   input[type="submit"] {
@@ -102,12 +102,18 @@ body{
     width: 80%;
     margin-top: 1px;
     margin-left: 2.5em;
+    border-radius: 4px;
     height: 2em;
     font-size: 1.1rem;
     background-color: #682424;
     border-color: white;
     min-width: 200px;
     color:#ffffff;
+    transition: 1s;
+  }
+  input[type="submit"]:hover{
+    background-color: #b85151;
+    cursor: pointer;
   }
   @media (max-width: 414px){  
     .checkbtn{
@@ -142,5 +148,30 @@ body{
       font-size: 1.5em;
     }
   }
+
+  /* Shake animation */
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+/* Shake effect for form */
+form .field.shake{
+  animation: shake 2.5s ease-in-out;
+}
+
   
   

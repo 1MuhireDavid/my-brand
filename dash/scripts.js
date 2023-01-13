@@ -40,7 +40,7 @@ function table() {
         table = table + `<tr>
       <td>${i + 1}</td>
       <td>${details[i].title}</td>
-      <td>${details[i].description}</td>
+      <td id="desc">${details[i].description}</td>
       <td><img src="${details[i].blogimage}" height=""></td>
       <td><button type="button" class="btn btn-warning" onclick="edit(${i})">Edit</button></td>
       <td><button type="button" class="btn btn-danger" onclick="deleteData(${i})">Delete</button></td>
@@ -51,9 +51,11 @@ function table() {
     document.getElementById("table").innerHTML = table;
 };
 document.getElementById("form").innerHTML = form;
+
 details = [];
 getData();
 table();
+
 function getData(){
     let Data = localStorage.getItem("details");
     if (Data) {
@@ -65,6 +67,8 @@ function getData(){
 function setData() {
     localStorage.setItem("details", JSON.stringify(details));
 };
+
+
 var image
 let blogimage = document.getElementById("pic");
 blogimage.addEventListener("change", (e)=>{
@@ -76,11 +80,10 @@ blogimage.addEventListener("change", (e)=>{
     image = reader.result;
   })
 })
+
+
+
 function save() {
-  
-
- 
-
     let title = document.getElementById("title");
     let description = document.getElementById("description");
    
@@ -94,7 +97,7 @@ function save() {
     let data = {
         title: title.value,
         description: description.value,
-        blogimage: image
+        blogimage: image,
     };
     details.push(data);
     setData();
@@ -125,7 +128,7 @@ function edit(index) {
   </div>
   <div class="form-group">
     <label for="title">Upload new image</label>
-    <input type="file" value="${details[index].blogimage}">
+    <input type="file" value="${details[index].blogimage}" id="pic">
   </div>
   <div class="form-group">
     <label for="email">Description</label>
@@ -139,13 +142,15 @@ function edit(index) {
     document.getElementById("form").innerHTML = editForm;
     // console.log('edit work');
 };
+
 function update(index) {
-    let newTitle = document.getElementById('newTitle');
-    var newDes = document.getElementById('newDes');
+    let newTitle = document.getElementById("newTitle");
+    var newDes = document.getElementById("description");
 
     details[index] = {
         title: newTitle.value,
-        description: newDes.value
+        description: newDes.value,
+        blogimage: newImage
     };
     setData();
     table();

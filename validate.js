@@ -5,28 +5,24 @@ function loginValidate(e){
     e.preventDefault();
     var emailId = document.getElementById("email").value
     var password = document.getElementById("pass").value
+    var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
-    if(emailId == null || emailId == ''){
-        
-    if(password == null || password == ''){
-        if(emailId == null || emailId == '', password == null || password == ''){
-            alert("Please enter all fields")
+if(emailId == null || emailId == '' && (password == null || password == '')){
+    alert("Please enter all fields")
             return false
-        }
-     else {
-            alert("Please enter password field")
-            console.log("password not entered")
-             return false   
-        }
-    }else {
-        alert("Please enter email field")
+}else if(emailId == null || emailId == '' || !emailId.match(validRegex) && (password !== null || password !== '')){
+    alert("Please enter email field")
+
     return false
-    }
-        }else{
-            window.setTimeout(function(){
-                window.location.href="/dash/index.html";
-            },5000);
-        }
+}else if(password.length < 6 || password == null || password == '' && (emailId !== null || emailId !== '')){
+    alert("Please enter a valid password with character morethan 5 and less than 15")
+    return false 
+}
+
+    window.setTimeout(function(){
+        window.location.href="/dash/index.html";
+    },5000);
+
     
 }
 

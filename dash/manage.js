@@ -27,7 +27,7 @@ function table() {
         table = table + `<tr>
       <td>${i + 1}</td>
       <td>${details[i].title}</td>
-      <td>${details[i].description}</td>
+      <td id="desc">${details[i].description}</td>
       <td><button type="button" class="btn btn-warning" onclick="edit(${i})">Edit</button></td>
       <td><button type="button" class="btn btn-danger" onclick="deleteData(${i})">Delete</button></td>
     </tr> `;

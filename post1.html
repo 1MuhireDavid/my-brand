@@ -46,6 +46,7 @@
       .comment {
         margin-top: 1em;
         gap: 1em;
+        margin-bottom: 2em;
       }
       .comment button {
         width: 40px;
@@ -125,6 +126,7 @@
           hyperlinks, and CSS layouts.
         </p>
       </div>
+      <input type="hidden" value="${blogs[index].blogTitle}" id="blog-title"/>
       <div class="comment">
         <div class="icons" id="icon"><i class="fa-regular fa-heart"></i><span id="span"></span></div>
         <input
@@ -137,17 +139,21 @@
       </div>
     </main>
     <script>
-        var i = 0
+      details =  [];
+      getData();
+        // var i = details[2].likes.value
+        
         document.getElementById("icon").addEventListener("click",inc);
         const span = document.getElementById("span")
 
         function inc(){
             i++
             span.innerHTML=i;
-        }
 
-        comments =  [];
-        details =  [];
+        } 
+
+           console.log(details);   
+        
     function getData(){
     let Data = localStorage.getItem("details");
     if (Data) {
@@ -157,24 +163,24 @@
     };
 };
 function setData() {
-    localStorage.setItem("comments", JSON.stringify(comments));
+    localStorage.setItem("details", JSON.stringify(details));
 };
 function save() {
   
-   
       let comment = document.getElementById("comment");
-       let data = {
-          likes: i,
-          comment: comment.value,
-          blog: "WEB DESIGN"
-          
-      };
-      comments.push(data);
+ 
+      details[2] = {
+        title: details[2].title,
+        description: description.value,
+        blogimage: image,
+        likes: 0,
+        comment: []
+      }
+      
       setData();
   
-      likes.value = "";
+      likes = "";
       comment.value = "";
-      blog.value = "";
   };
 
     </script>
