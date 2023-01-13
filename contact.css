@@ -108,7 +108,7 @@ display: none;
   
   input,
   textarea,
-  select {
+  select #save{
     margin: 10px 0 0 0;
     width: 100%;
     min-height: 2em;
@@ -116,29 +116,42 @@ display: none;
   }
 
   
-  input, textarea {
+  input, textarea #save{
     background-color: F6F6F6;
     
     color: black;
     border: none;
-  }
+  } 
   
   
-  input[type="submit"] {
+  .form-contact button {
     display: block;
     width: 60%;
-    margin: 1em auto;
     height: 2em;
     font-size: 1.1rem;
     background-color: #682424;
-    border-color: white;
+    border: 1px solid white;
     min-width: 300px;
-    border-radius: 4em;
+    border-radius: 10px;
+    color: white;
+    width: auto;
+    transition: 1s;
+  }
+
+   .form-contact button:hover{
+    background-color: #b85151;
+    cursor: pointer;
+   }
+  input:focus,textarea:focus{
+    border: none;
+    outline: none;
+    margin-top: 0;
     
   }
   .fa{
     color: black;
     padding-left: 1em;
+    padding-top: 1em;
   }
 .icons{
   display: flex;
@@ -146,7 +159,16 @@ display: none;
   border: 1px solid black;
   border-radius: 1em;
   gap: 1em;
+}
 
+.icon{
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+
+}
+.change{
+  margin-left: 1em;
 }
   
 

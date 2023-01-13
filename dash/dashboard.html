@@ -15,10 +15,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
 
-
-
 </head>
-<body>
+<body >
    <!-- header -->
    <nav>
     <input type="checkbox" id="check"/>
@@ -27,7 +25,7 @@
     </label>
     <img src="/images/logo.jpg" alt="">
         <ul>
-        <li><button><a href="login.html">Logout</a></button></li>
+          <li><button onclick="logout()">Logout</button></li>
     </ul>
 </nav>
   <!-- End Header -->
@@ -58,8 +56,10 @@
       
             <div class="content">
               <h2 class="page-title">Manage blog</h2>
-      
-              <table>
+              <div id="table" class="container-fluid">
+
+              </div>
+              <!-- <table>
                   <thead>
                       <th>SN</th>
                       <th>Title</th>
@@ -92,18 +92,15 @@
                           <td><a href="#" class="save">Save</a></td>                          
                       </tr>
                   </tbody>
-              </table>
+              </table> -->
             </div>
           </div>
           
         </main></div>
         <!-- End of main -->
-  
-
-
 
 
     </div>
-    <script src="/dash/scripts.js"></script>
+    <script src="/dash/manage.js"></script>
 </body>
 </html>

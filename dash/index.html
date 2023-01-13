@@ -27,7 +27,7 @@
     </label>
     <img src="/images/logo.jpg" alt="">
         <ul>
-        <li><button><a href="login.html">Logout</a></button></li>
+          <li><button onclick="logout()">Logout</button></li>
     </ul>
 </nav>
   <!-- End Header -->
@@ -59,7 +59,8 @@
             <div class="content">
               <h2  style="text-align: start; padding: 1em;">Overview</h2>
                <p style="text-align: start; padding: 1em; margin-top: -1em;">Recent Blogs</p>
-              <table>
+              <div id="table"></div>
+               <!-- <table>
                   <thead>
                       <th>SN</th>
                       <th>Title</th>
@@ -83,9 +84,13 @@
                                                    
                       </tr>
                   </tbody>
-              </table>
+              </table> -->
             </div>
-            <div class="index-card">
+            <p style="text-align: start; padding: 1em; margin-top: 1em;">Recent Comments &#38; Likes</p>
+          <div id="comm"></div>
+            
+            <!-- <div class="index-card">
+
               <div class="cards">
                 <p>20</p>
                 <h3>Likes</h3>
@@ -95,9 +100,11 @@
                 <h3>Comments</h3>
               </div>
                 
-            </div>
+            </div> -->
           </div>
-          
+          <p style="text-align: start; padding: 1em; margin-top: 1em;">Recent Contact Me messages</p>
+          <div id="messages"></div>
+
         </main></div>
         <!-- End of main -->
   
@@ -106,6 +113,7 @@
 
 
     </div>
-    <script src="/dash/scripts.js"></script>
+    <script src="/dash/feedback.js"></script>
+
 </body>
 </html>

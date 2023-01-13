@@ -42,7 +42,7 @@
                 type="text"
                 class="input-field"
                 placeholder="Enter your name"
-                required
+                
               />
             </div>
             <label>Email </label>
@@ -54,7 +54,7 @@
                 type="email"
                 class="input-field"
                 placeholder="Enter your email"
-                required
+                
               />
             </div>
             <label>Content </label>
@@ -62,20 +62,27 @@
               <textarea name="content" id="content" class="input-field" cols="30" rows="10" placeholder="Please enter your comment here"></textarea>
             </div>
           </fieldset>
-          <input type="submit" value="Submit" id="save"/>
-          <input type="button" value="read" id="read_all_data">
+
+          <button type="submit"  id="save">Submit </button>
         </form>
       </div>
     
     <div class="form-container">
-      <p>Address: Kigali - Rwanda</p>
-      <br/>
-      <p>Tel: 0788787769</p>
-      <br/>
-      <p>Email: muhiredavid74@gmail.com</p>
-      <br/>
+      <div class="icon change">
+        <i class="fa-solid fa-location-dot"></i>
+        <p>Address: Kigali - Rwanda</p>
+      </div>
+      <div class="icon change">
+        <i class="fa-solid fa-phone"></i>
+        <p>Tel: 0788787769</p>
+      </div>
+      <div class="icon">
+        <i class="fa fa-envelope icon"> </i>
+        <p>Email: muhiredavid74@gmail.com</p>
+      </div>
     </div>
 </div>
 <script src="/local.js"></script>
+<!-- <script src="/validate.js"></script> -->
   </body>
 </html>

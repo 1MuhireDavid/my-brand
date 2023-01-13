@@ -27,7 +27,7 @@
     </label>
     <img src="/images/logo.jpg" alt="">
         <ul>
-        <li><button><a href="login.html">Logout</a></button></li>
+        <li><button onclick="logout()">Logout</button></li>
     </ul>
 </nav>
   <!-- End Header -->
@@ -58,26 +58,11 @@
           
                 <div class="content">
                   <h2 class="page-title">Create new blog</h2>
-          
-                  <form action="create.html" method="post">
-                      <div>
-                          <label for="">Title</label>
-                          <input type="text" name="title" class="text-input" id="title">
-                      </div>
-                      <div>
-                          <label for="">Description</label><textarea name="body" id="description">
-          
-                          </textarea>
-                      </div>
-                      <div>
-                          <label>Blog picture</label>
-                          <input type="file" name="pic" id="pic">
-                      </div>
-                      <div>
-                          <button type="submit" class="btn btn-big" id="save">Add Blog</button>
-                      </div>          
-                  </form>         
-          
+                 <div class="form" id="form">
+                </div>
+                <div id="table" class="container-fluid">
+
+                </div>
                 </div>
               </div>
           

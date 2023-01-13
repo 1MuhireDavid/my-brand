@@ -32,6 +32,13 @@ nav ul li{
     line-height: 80px;
     margin: 0px0 5px;
 }
+
+nav button:hover {
+background-color: #e66868;
+border-radius: 10px;
+height: 30px;
+transition: 1s;
+}
 nav ul li a{
     text-decoration: none;
     color: white;
@@ -109,7 +116,26 @@ color: #EEEEEE;
     gap: 2em;
     list-style: none;
     padding: 2em;
+    
 }
+.left-side #sidebar .nav ul li a:hover{
+    transition: 1s;
+    color: rgb(3, 16, 41);
+}
+/* ============================= sidebar-list ===============  */
+
+.left-side #sidebar .nav  ul li a{
+text-decoration: none;
+color: #EEEEEE;
+}
+.left-side #sidebar .nav ul{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    list-style: none;
+    padding: 2em;
+}
+
 
 
 /* --------------- MAIN----------------- */
@@ -168,25 +194,32 @@ h2{
 
 
     /* ================= form styles ======== */
-    form div{
+    .form div, textarea{
         display: flex;
         flex-direction: column;
         padding: 1em;
-    justify-content: start;
-    width: 60vw;
+        justify-content: start;
+        width: 60vw;
     }
     input, textarea {
         background-color: #F6F6F6;
-        line-height: 1.6em;
+        
         color: black;
-        border-radius: 1em;
+        border-radius: 5px;
         border: none;
         width: 60%;
         margin: 0em auto;
+        outline: none;
+      }
+      input{
+        line-height: 2em;
+
+      }
+      nav button{
+        color: white;
       }
       
-      
-     form button[type="submit"] {
+     .form button[type="submit"] {
         display: block;
         width: 40%;
         margin: 1em auto;
@@ -195,7 +228,7 @@ h2{
         background-color: #682424;
         border-color: white;
         min-width: 300px;
-        border-radius: 4em;
+        border-radius: 10px;
         color: white;
         
       }
@@ -233,4 +266,28 @@ h2{
         
     }
 
+/* ============== table js styles ==============*/
+.btn-warning{
+    background-color: rgb(201, 201, 30);
+    width: 60px;
+    border: none;
+}
+.btn-danger{
+    background-color: rgb(168, 36, 36);
+    color: white;
+    width: 60px;
+    border: none;
 
+}
+table #desc{
+    --max-lines: 3;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: var(--max-lines);
+}
+/* =========== img dynamic ============ */
+table img{
+    width: 60%;
+    height: 40%;
+}
