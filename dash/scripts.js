@@ -157,6 +157,6 @@ function update(index) {
 //=============================================logout=================
 function logout(){
   window.setTimeout(function(){
-    window.location.href="../homepage.html";
+    window.location.href="../index.html";
 },5000);
 }
