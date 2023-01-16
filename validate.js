@@ -33,9 +33,9 @@ function contactValidate(e){
     var content = document.getElementById("content").value
 
 
-    if(emailId == null || emailId == '', content == null || content == '', name == null || name == ''){   
+    if(emailId == null || emailId == '' || !emailId.match(validRegex), content == null || content == '', name == null || name == ''){   
     if(emailId == null || emailId == ''){
-        alert("Email field should not be blank")
+        alert("Email field should not be blank or correct email format")
         return false 
     }
         

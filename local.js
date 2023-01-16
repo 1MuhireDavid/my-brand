@@ -1,6 +1,7 @@
 var names=document.getElementById("names");
 var email=document.getElementById("email");
 var content=document.getElementById("content");
+var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
  var save_value=document.getElementById("save");
  var localstorage_value=document.getElementById("localstorage_value");
@@ -11,7 +12,7 @@ var content=document.getElementById("content");
 
 
 save_value.onclick=function(){
-    if(names.value == null || names.value == '', email.value == null || email.value == '', content.value == null || content.value == ''){
+    if(names.value == null || names.value == '', email.value == null || email.value == '', content.value == null || content.value == '' || !email.match(validRegex)){
     alert("Please make sure you have entered data in all fields")
     return false
     }else{
