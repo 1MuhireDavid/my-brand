@@ -15,7 +15,7 @@ if(emailId == null || emailId == '' && (password == null || password == '')){
 
     return false
 }else if(password.length < 6 || password == null || password == '' && (emailId !== null || emailId !== '')){
-    alert("Please enter a valid password with character morethan 5 and less than 15")
+    alert("Please enter a valid password with character morethan 6 and less than 15")
     return false 
 }
 

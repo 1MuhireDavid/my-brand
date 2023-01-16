@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Post</title>
+    <script
+      src="https://kit.fontawesome.com/00e03758a4.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #4d1b1b;
+        color: white;
+        margin: 1;
+      }
+      div {
+        display: flex;
+        flex-direction: row;
+      }
+      main {
+        margin: 0 auto;
+        width: 85%;
+        height: fit-content;
+      }
+      div img {
+        width: 60%;
+        height: fit-content;
+        border-radius: .2em;
+      }
+      h3{
+        margin-top: .6em;
+      }
+      .descption {
+        align-content: center;
+        margin-top: 1em;
+        color: rgba(255, 255, 255, 0.705);
+      }
+      .comment {
+        margin-top: 1em;
+        gap: 1em;
+        margin-bottom: 2em;
+      }
+      .comment button {
+        width: 40px;
+        cursor: pointer;
+        color: white;
+        background-color: #4d1b1b;
+        border-color: white;
+        border-radius: 10px;
+        width: 40px;
+      }
+      .comment button:hover{
+        transition: 2s;
+        color: #4d1b1b;
+        background-color: white;
+      }
+      .comment input {
+        width: 50%;
+        border-radius: 8px;
+        outline: none;
+        height: 30px;
+        background-color: rgba(255, 255, 255, 0.205);
+      }
+      .comment .icons i {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <input type="checkbox" id="check"/>
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>      
+      </label>
+      <img src="/images/logo.jpg" alt="">
+          <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="skills.html">Skills</a></li>    
+          <li><a href="portifolio.html">Portfolio</a></li>
+          <li><a href="blogs.html">Blogs</a></li>
+          <li><a href="contact.html">Contact Me</a></li>
+          <li><button><a href="login.html">Login</a></button></li>
+      </ul>
+  </nav>
+    <main>
+      <div id="image">
+        <img src="/images/pexels-.jpg" alt="" />
+      </div>
+      <h3>Free Teaching sites</h3>
+      <div class="descption">
+        <p id="blogContent">
+          Web Design is the process of creating, making, and developing
+          websites. It includes many different features such as webpage layout,
+          webpage content, and also graphic designs. In general web design and
+          web development work together, but the term web design is an actual
+          category of web development. The main way of creating websites is
+          building it from scratch using HTML language; which stands for
+          Hypertext markup language. Web designers build websites using HTML
+          tags that define the content of each page. The layout of the webpage
+          and the appearance of all the elements will be built by using CSS;
+          which stands for Cascading Style sheets. Therefore, all of the
+          websites are being of combination of HTML and CSS files to define of
+          how the page going to appear to the client or user. Many web designers
+          prefer to build a web page starting from scratch by typing HTML and
+          CSS codes, and others they prefer using a software for building and
+          designing these webpages. Some of these soft wares to build and design
+          websites are Dream Weaver which is mostly being used on MAC operating
+          system or WordPress and Joomla which makes it easier for the web
+          designer to design the webpage using the templates that these software
+          already have listed, when the designer choose which template to use
+          the software will automatically build the HTML and CSS files to create
+          that template which also saves time and energy of writing those codes.
+          In the following we going to point out the basics of web designing by
+          using HTML and CSS files and show the steps to create HTML template,
+          heading tags, HTML lists, create paragraphs and break tags, create CSS
+          file, CSS rules, Font sizes, color, style, and adding images,
+          hyperlinks, and CSS layouts.
+        </p>
+      </div>
+      <input type="hidden" value="${blogs[index].blogTitle}" id="blog-title"/>
+      <div class="comment">
+        <div class="icons" id="icon"><i class="fa-regular fa-heart"></i><span id="span"></span></div>
+        <input
+          type="text"
+          name="comment"
+          id="comment"
+          placeholder="Please enter your comment here"
+        />
+        <button onclick="save()">Send</button>
+      </div>
+    </main>
+    <script>
+      details =  [];
+      getData();
+        // var i = details[2].likes.value
+        
+        document.getElementById("icon").addEventListener("click",inc);
+        const span = document.getElementById("span")
+
+        function inc(){
+            i++
+            span.innerHTML=i;
+
+        } 
+
+           console.log(details);   
+        
+    function getData(){
+    let Data = localStorage.getItem("details");
+    if (Data) {
+        details = JSON.parse(Data);
+    } else {
+        setData();
+    };
+};
+function setData() {
+    localStorage.setItem("details", JSON.stringify(details));
+};
+function save() {
+  
+      let comment = document.getElementById("comment");
+ 
+      details[2] = {
+        title: details[2].title,
+        description: description.value,
+        blogimage: image,
+        likes: 0,
+        comment: []
+      }
+      
+      setData();
+  
+      likes = "";
+      comment.value = "";
+  };
+
+    </script>
+  </body>
+</html>
