@@ -27,7 +27,7 @@ function table() {
       <td>${i + 1}</td>
       <td>${details[i].title}</td>
       <td id="desc">${details[i].description}</td>
-      <td><button type="button" class="btn btn-danger" onclick="deleteData(${i})">Delete</button></td>
+      <td><button type="button" class="btn btn-danger" onclick="deleteData(${i})"><i class="fa-solid fa-trash"></i></button></td>
     </tr> `;
     };
     table = table+`</tbody>

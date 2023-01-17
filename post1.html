@@ -75,6 +75,7 @@
     </style>
   </head>
   <body>
+    <div id="loading-message">Page is loading...</div>
     <nav>
       <input type="checkbox" id="check"/>
         <label for="check" class="checkbtn">
@@ -181,6 +182,9 @@ function save() {
   
       likes = "";
       comment.value = "";
+  };
+  window.onload = function() {
+    document.getElementById("loading-message").style.display = "none";
   };
 
     </script>

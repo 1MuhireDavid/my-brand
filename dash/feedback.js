@@ -75,7 +75,7 @@ function table() {
       <td>${feedback[i].name}</td>
       <td>${feedback[i].email}</td>
       <td>${feedback[i].content}</td>
-      <td><button type="button" class="btn btn-danger" onclick="deleteData(${i})">Delete</button></td>
+      <td><button type="button" class="btn btn-danger" onclick="deleteData(${i})"><i class="fa-solid fa-trash"></i>></td>
     </tr> `;
     };
     table = table+`</tbody>

@@ -13,7 +13,7 @@
 /* =============== navbar =================== */
 nav{
     background: #4d1b1b;
-    height: 80px;
+    height: 5em;
     width:100%;
 }
 nav img{
@@ -90,7 +90,7 @@ nav button{
 .container{
     margin: 0;
     display: flex;
-    height: calc(100%-66px);
+    height: 80vh;
     width: 100%;
 }
 
@@ -99,7 +99,7 @@ nav button{
 
 .left-side{
     display: block;
-    padding-top: 2rem;
+    padding-top: 1.5rem;
     flex: 2;
     background-color: #682424;
     height: 87.8vh;
@@ -142,7 +142,7 @@ color: #EEEEEE;
 .main{
     flex: 8;
     width: 100%;
-    overflow-y: auto;
+    overflow: hidden;
     /* padding: 20px 20px; */
 }
 /* =============== dashboard content ======================== */
@@ -150,11 +150,20 @@ h2{
     color: black;
     padding-left: 1em;
 }
+.index {
+    overflow: hidden;
+        height: 87.8vh;
+        overflow-y: auto;
+}
 .admin-content{
         /* padding: 40px 100px 100px; */
-        overflow-y: auto;
         color: black;
-        width: 90%;
+        width: 100%;
+        overflow: hidden;
+        height: 85.8vh;
+        overflow-y: auto;
+
+
     }
     
     .page-title{
@@ -267,18 +276,21 @@ h2{
     }
 
 /* ============== table js styles ==============*/
-.btn-warning{
+.fa-pen-to-square{
     background-color: rgb(201, 201, 30);
     width: 60px;
     border: none;
+    cursor: pointer;
 }
-.btn-danger{
+.fa-trash{
     background-color: rgb(168, 36, 36);
     color: white;
     width: 60px;
     border: none;
+    cursor: pointer;
 
 }
+
 table #desc{
     --max-lines: 3;
     display: -webkit-box;
@@ -288,6 +300,6 @@ table #desc{
 }
 /* =========== img dynamic ============ */
 table img{
-    width: 60%;
-    height: 40%;
+    width: 10vw;
+    height: 15vh;
 }

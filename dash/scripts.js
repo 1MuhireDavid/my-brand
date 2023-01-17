@@ -37,8 +37,8 @@ function table() {
       <td>${details[i].title}</td>
       <td id="desc">${details[i].description}</td>
       <td><img src="${details[i].blogimage}" height=""></td>
-      <td><button type="button" class="btn btn-warning" onclick="edit(${i})">Edit</button></td>
-      <td><button type="button" class="btn btn-danger" onclick="deleteData(${i})">Delete</button></td>
+      <td><button type="button" class="btn btn-warning" onclick="edit(${i})"><i class="fa-regular fa-pen-to-square"></i></button></td>
+      <td><button type="button" class="btn btn-danger" onclick="deleteData(${i})"><i class="fa-solid fa-trash"></i></button></td>
     </tr> `;
     };
     table = table+`</tbody>
@@ -83,8 +83,6 @@ function save() {
     let description = document.getElementById("description");
    
 
-
-
     if (title.value == 0 || description.value == 0) {
         alert("Please enter all the fields");
         return
@@ -92,7 +90,7 @@ function save() {
     let data = {
         title: title.value,
         description: description.value,
-        blogimage: image,
+        blogimage: image
     };
     details.push(data);
     setData();
@@ -113,39 +111,49 @@ function deleteData(index) {
     // console.log(details)
 };
 
+
 function edit(index) {
     let editForm = `<div>
-    <form >
-
   <div class="form-group">
     <label for="title">Title</label>
     <input type="text" value="${details[index].title}" class="form-control" id="newTitle" aria-describedby="emailHelp" placeholder="Update Your Name">
   </div>
   <div class="form-group">
     <label for="title">Upload new image</label>
-    <input type="file" value="${details[index].blogimage}" id="pic">
+    <input type="file" value="${details[index].blogimage}" id="picture">
   </div>
   <div class="form-group">
-    <label for="email">Description</label>
-    <textarea name="body" id="description">
+    <label for="description">Description</label>
+    <textarea name="body" id="NewDesc">
     ${details[index].description} 
     </textarea>
     </div>
   <button type="submit" class="btn btn-big" onclick="update(${index})">Update</button>
-</form>
   </div>`;
     document.getElementById("form").innerHTML = editForm;
-    // console.log('edit work');
+    
 };
 
-function update(index) {
-    let newTitle = document.getElementById("newTitle");
-    var newDes = document.getElementById("description");
 
+function update(index) {
+    let newTitle = document.getElementById('newTitle');
+    let newDes = document.getElementById('NewDesc');
+
+var input = document.getElementById("picture");
+input.addEventListener("change", function() {
+    var file = input.files[0];
+    var reader = new FileReader();
+    reader.onloadend = function() {
+      var imgData = reader.result;
+    }
+    reader.readAsDataURL(file);
+});
+
+    
     details[index] = {
         title: newTitle.value,
         description: newDes.value,
-        blogimage: newImage
+        blogimage: imgData
     };
     setData();
     table();
