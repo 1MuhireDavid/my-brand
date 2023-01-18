@@ -75,7 +75,7 @@ function table() {
       <td>${feedback[i].name}</td>
       <td>${feedback[i].email}</td>
       <td>${feedback[i].content}</td>
-      <td><button type="button" class="btn btn-danger" onclick="deleteData(${i})"><i class="fa-solid fa-trash"></i>></td>
+      <td><button type="button" class="btn btn-danger" onclick="deleteData(${i})"><i class="fa-solid fa-trash"></i></td>
     </tr> `;
     };
     table = table+`</tbody>
@@ -83,49 +83,6 @@ function table() {
     document.getElementById("messages").innerHTML = table;
 };
 table();
-
-// ============================== comments ===================================
-function getComments(){
-  let data = localStorage.getItem("comments");
-  console.log(data)
-  if (data) {
-    comments = JSON.parse(data);
-  } else {
-      setComments();
-  };
-};
-function setComments() {
-  localStorage.setItem("comments", JSON.stringify(comments));
-};
-function table1(){
-  let feedback=JSON.parse(localStorage.getItem("feedback"));
-  let comments=JSON.parse(localStorage.getItem("comments"));
-  let table = `<table class="table">
-<thead>
-  <tr>
-    <th class="col-1">NO</th>
-    <th class="col-3">Title</th>
-    <th class="col-4">LIKES</th>
-    <th class="col-2">COMMENTS</th>
-    <th class="col-2">Delete</th>
-  </tr>
-</thead>
-<tbody>`;
-  for (let i = 0; i < comments.length; i++){
-      table = table + `<tr>
-    <td>${i + 1}</td>
-    <td>${details[i].title}</td>
-    <td>${comments[i].likes}</td>
-    <td>${comments[i].comment}</td>
-    <td><button type="button" class="btn btn-danger" onclick="deleteData(${i})">Delete</button></td>
-  </tr> `;
-  };
-  table = table+`</tbody>
-  </table>`;
-  document.getElementById("comm").innerHTML = table;
-  console.log("hello")
-};
-table1();
 
 //=============================================logout=================
 

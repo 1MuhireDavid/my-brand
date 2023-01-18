@@ -10,9 +10,10 @@ var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9
 // var read_all_data=document.getElementById("read_all_data");
 
 
-
+feedback = [];
+getData();
 save_value.onclick=function(){
-    if(names.value == null || names.value == '', email.value == null || email.value == '', content.value == null || content.value == '' || !email.match(validRegex)){
+    if(names.value == null || names.value == '', email.value == null || email.value == '', content.value == null || content.value == ''){
     alert("Please make sure you have entered data in all fields")
     return false
     }else{
@@ -21,8 +22,8 @@ save_value.onclick=function(){
     }
     
 }
-feedback = [];
-getData();
+
+
 function getData(){
     let Data = localStorage.getItem("feedback");
     if (Data) {
