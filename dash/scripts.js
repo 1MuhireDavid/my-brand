@@ -94,7 +94,7 @@ function save() {
   console.log(title.value, description.value, image.value);
  // const token =
  //   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZGMyN2QyODZiMGM4MzZhNzc5ODU3MiIsImlhdCI6MTY3NTc2NTU1NiwiZXhwIjoxNjc1ODUxOTU2fQ.lzJWBpnuH1lKc7LrQSgsUVPV2_u6iAueAx8iv89bTpE";
-  const url = "http://localhost:3000/posts";
+  const url = "https://mybrand-backend-tv4i.onrender.com/posts";
   const body = {
     title: title.value,
     description: description.value,
