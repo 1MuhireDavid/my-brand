@@ -1,4 +1,7 @@
 
+//const url = "https://mybrand-backend-tv4i.onrender.com";
+const url = "http://localhost:3000";
+
 
 var form = `<div>
   <div class="form-group">
@@ -20,8 +23,23 @@ var form = `<div>
 </form>
   </div>`;
 
+
+
+function getData(){
+  fetch(`${url}/posts`)
+      .then((response) => response.json())
+      .then(data => {
+          details = data;
+          table();
+      })
+      .catch((error) => {
+        console.error("There was a problem with the fetch operation:", error);
+      });
+    
+};
 function table() {
-    let table = `<table class="table">
+  console.log(details.data)
+ var table = `<table class="table">
   <thead>
     <tr>
       <th class="col-1">NO</th>
@@ -33,12 +51,12 @@ function table() {
     </tr>
   </thead>
   <tbody>`;
-    for (let i = 0; i < details.length; i++){
+    for (let i = 0; i < details.data.length; i++){
         table = table + `<tr>
       <td>${i + 1}</td>
-      <td>${details[i].title}</td>
-      <td id="desc">${details[i].description}</td>
-      <td><img src="${details[i].blogimage}" height=""></td>
+      <td>${details.data[i].title}</td>
+      <td id="desc">${details.data[i].description}</td>
+      <td><img src="${details.data[i].imageUrl}"></td>
       <td><button type="button" class="btn btn-warning" onclick="edit(${i})"><i class="fa-regular fa-pen-to-square"></i></button></td>
       <td><button type="button" class="btn btn-danger" onclick="deleteData(${i})"><i class="fa-solid fa-trash"></i></button></td>
     </tr> `;
@@ -48,21 +66,12 @@ function table() {
     document.getElementById("table").innerHTML = table;
 };
 document.getElementById("form").innerHTML = form;
-
-details = [];
+var details = [];
 getData();
 table();
 
-function getData(){
-    let Data = localStorage.getItem("details");
-    if (Data) {
-        details = JSON.parse(Data);
-    } else {
-        setData();
-    };
-};
 function setData() {
-    localStorage.setItem("details", JSON.stringify(details));
+    //localStorage.setItem("details", JSON.stringify(details));
 };
 
 //var image
@@ -75,7 +84,6 @@ function setData() {
 //     image = reader.result;
 //   })
 // })
-
 
 function save() {
     let title = document.getElementById("title");
@@ -94,13 +102,13 @@ function save() {
   console.log(title.value, description.value, image.value);
  // const token =
  //   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZGMyN2QyODZiMGM4MzZhNzc5ODU3MiIsImlhdCI6MTY3NTc2NTU1NiwiZXhwIjoxNjc1ODUxOTU2fQ.lzJWBpnuH1lKc7LrQSgsUVPV2_u6iAueAx8iv89bTpE";
-  const url = "https://mybrand-backend-tv4i.onrender.com/posts";
+  
   const body = {
     title: title.value,
     description: description.value,
     imageUrl: image.value,
   };
-  fetch(url, {
+  fetch(`${url}/posts`, {
     method: "POST",
     mode: "cors",
     headers: {
@@ -115,23 +123,36 @@ function save() {
     .catch((error) => {
       console.error("There was a problem with the fetch operation:", error);
     });
-    details.push(data);
+    //details.push(data);
     setData();
 
     // console.log(details)
     // console.log(email.value)
-  
-
-
     table();
     title.value = "";
     description.value = "";
-    blogimage.value = "";
+    image.value = "";
 };
 function deleteData(index) {
-    details.splice(index, 1);
-    setData();
-    table();
+    // details.splice(index, 1);
+    // setData();
+
+    fetch(`${url}/posts/${details.data[index]._id}`, {
+      method: 'DELETE',
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2M2RiYjk4NmQ5MGIxNGFmZmU2YTEyZGQiLCJlbWFpbCI6Im11aGlyZWRhbkBnbWFpbC5jb20iLCJpYXQiOjE2NzU4NjMzMDl9.wvc0zQBaW-EDEKKhu-Td8MwnhOb1_iUwKsdr01K7jRc"}`,
+      },
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log(data);
+      details.data.splice(index, 1);
+      table();
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
 
     // console.log('delete work')
     // console.log(details)
@@ -165,17 +186,31 @@ function update(index) {
     let newTitle = document.getElementById('newTitle');
     let newDes = document.getElementById('NewDesc');
 
-var input = document.getElementById("picture");
-input.addEventListener("change", function() {
-    var file = input.files[0];
-    var reader = new FileReader();
-    reader.onloadend = function() {
-      var imgData = reader.result;
-    }
-    reader.readAsDataURL(file);
-});
+let image = document.getElementById("picture");
+// input.addEventListener("change", function() {
+//     var file = input.files[0];
+//     var reader = new FileReader();
+//     reader.onloadend = function() {
+//       var imgData = reader.result;
+//     }
+//     reader.readAsDataURL(file);
+// });
 
-    
+fetch(`${url}/posts/${index}`, {
+  method: "PUT",
+  mode: "cors",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify(body),
+})
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error("There was a problem with the fetch operation:", error);
+  });
     details[index] = {
         title: newTitle.value,
         description: newDes.value,
