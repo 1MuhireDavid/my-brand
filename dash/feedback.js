@@ -6,8 +6,8 @@ let comments=[]
 let details=[]
 
 // ============================== Blogs for index page on Dashboard ===================================
-//const url = "https://mybrand-backend-tv4i.onrender.com";
-const url = "http://localhost:3000";
+const url = "https://mybrand-backend-tv4i.onrender.com";
+//const url = "http://localhost:3000";
 function getBlog(){
   fetch(`${url}/posts`)
       .then((response) => response.json())

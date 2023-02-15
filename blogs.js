@@ -1,7 +1,7 @@
 const row = document.querySelector('.row');
-//const url = "https://mybrand-backend-tv4i.onrender.com";
+const url = "https://mybrand-backend-tv4i.onrender.com";
 
-const url = "http://localhost:3000";
+//const url = "http://localhost:3000";
 fetch(`${url}/posts`)
   .then(response => response.json())
   .then(posts => {

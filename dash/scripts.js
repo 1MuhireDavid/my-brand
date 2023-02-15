@@ -1,7 +1,7 @@
 
-//const url = "https://mybrand-backend-tv4i.onrender.com";
+const url = "https://mybrand-backend-tv4i.onrender.com";
 
-const url = "http://localhost:3000";
+//const url = "http://localhost:3000";
 
 var form = `<div>
   <div class="form-group">
