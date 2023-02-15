@@ -292,6 +292,7 @@ h2{
 }
 
 table #desc{
+    height: 171.4px;
     --max-lines: 3;
     display: -webkit-box;
     overflow: hidden;

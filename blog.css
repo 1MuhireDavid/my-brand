@@ -35,6 +35,7 @@ nav button{
   background-color: #682424;
   border: none;
 }
+
 .checkbtn{
   font-size: 30px;
   color: white;
@@ -47,8 +48,19 @@ nav button{
 #check{
 display: none;
 }
-
-
+.row textarea{
+  margin: 1em 1em 0em 1em;
+}
+.row .column button{
+  margin-top: -2em;
+}
+.row p{
+    --max-lines: 3;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: var(--max-lines);
+}
 
   
   .row{
@@ -58,19 +70,19 @@ display: none;
     /* background-color: #682424; */
     padding: 1em;
   }
-  .column1 img{
+  .column img{
     width: 100%;
     height: 70%;
     
   }
-  .column2 img{
+  /* .column2 img{
     width: 100%;
     height: 70%;
-  }
-  .column3 img{
+  } */
+  /* .column3 img{
     width: 100%;
     height: 70%;
-  }
+  } */
   .row a{
     text-decoration: none;
     color: white;
@@ -140,4 +152,16 @@ h2{
     .row{
       gap: 2em;
     }
+  }
+  [data-signedin = "true"] .hidden {
+    display: none;
+  }
+  [data-signedin = "false"] .hidden {
+    display: block;
+  }
+  [data-signedin = "true"] .visible {
+    display: block;
+  }
+  [data-signedin = "false"] .visible {
+    display: none;
   }

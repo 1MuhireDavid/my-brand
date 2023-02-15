@@ -41,6 +41,7 @@ table();
 
 function logout(){
     window.setTimeout(function(){
+  localStorage.removeItem("token");
       window.location.href="../index.html";
   },5000);
   }

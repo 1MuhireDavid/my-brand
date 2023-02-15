@@ -126,7 +126,18 @@ padding: 3em 0 0 1em;
         display: block;
     }
 }
-
+[data-signedin = "true"] .hidden {
+    display: none;
+  }
+  [data-signedin = "false"] .hidden {
+    display: block;
+  }
+  [data-signedin = "true"] .visible {
+    display: block;
+  }
+  [data-signedin = "false"] .visible {
+    display: none;
+  }
 
 
 

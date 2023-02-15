@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-id="true">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,7 +17,7 @@
     <script src="https://kit.fontawesome.com/00e03758a4.js" crossorigin="anonymous"></script>
 
 </head>
-<body>
+<body onload="checkUser()">
    <!-- header -->
    <nav>
     <input type="checkbox" id="check"/>
@@ -111,6 +111,31 @@
 
 
     </div>
+    <script>
+      function checkUser(){
+        const token = localStorage.getItem("token");
+if(!token){
+  window.location.href="../index.html";
+}else{
+  const [header, payload, signature] = token.split('.');
+
+// Decode the base64-encoded payload
+const decodedPayload = atob(payload);
+
+// Parse the JSON object
+const data = JSON.parse(decodedPayload);
+if(data.email=="muhire@gmail.com"){
+  console.log("hello")
+}else{
+  window.location.href="../index.html";
+}
+}
+// Split the token into its three parts
+
+
+      }
+     
+    </script>
     <script src="/dash/feedback.js"></script>
 
 </body>
