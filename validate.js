@@ -32,7 +32,7 @@ if(emailId == null || emailId == '' && (password == null || password == '')){
 }
 async function login(email, password) {
     try {
-      const response = await fetch("http://localhost:3000/signin", {
+      const response = await fetch("https://mybrand-backend-tv4i.onrender.com/signin", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
