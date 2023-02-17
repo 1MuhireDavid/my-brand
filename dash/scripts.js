@@ -1,7 +1,7 @@
 
-const url = "https://mybrand-backend-tv4i.onrender.com";
+//const url = "https://mybrand-backend-tv4i.onrender.com";
 
-//const url = "http://localhost:3000";
+const url = "http://localhost:3000";
 
 var form = `<div>
   <div class="form-group">
@@ -136,7 +136,7 @@ function save() {
 function deleteData(index) {
     // details.splice(index, 1);
     // setData();
-const token = JSON.parse(localStorage.getItem("token"))[0].tok;
+const token = localStorage.getItem("token");
     fetch(`${url}/posts/${details.data[index]._id}`, {
       method: 'DELETE',
       headers: {
