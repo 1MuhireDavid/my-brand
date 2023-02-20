@@ -175,7 +175,8 @@ h2{
     table{
         width: 100%;
         border-collapse: collapse;
-        font-size: 1.1rem;      
+        font-size: 1.1rem;     
+        border-spacing: 0; 
     }
     
     th, td {
@@ -206,7 +207,7 @@ h2{
     .form div, textarea{
         display: flex;
         flex-direction: column;
-        padding: 1em;
+        padding: 1em; 
         justify-content: start;
         width: 60vw;
     }

@@ -1,17 +1,19 @@
 let details=[]
+//const url = "https://mybrand-backend-tv4i.onrender.com";
+const url = "http://localhost:3000";
 function getData(){
-    let Data = localStorage.getItem("details");
-    if (Data) {
-       details = JSON.parse(Data);
-    } else {
-        setData();
-    };
+     fetch(`${url}/posts`)
+      .then((response) => response.json())
+      .then(data => {
+          details = data;
+          table();
+      })
+      .catch((error) => {
+        console.error("There was a problem with the fetch operation:", error);
+      });
 };
-function setData() {
-    localStorage.setItem("details", JSON.stringify(details));
-};
+getData();
 function table() {
-    let details=JSON.parse(localStorage.getItem("details"));
     let table = `<table class="table">
   <thead>
     <tr>
@@ -22,11 +24,11 @@ function table() {
     </tr>
   </thead>
   <tbody>`;
-    for (let i = 0; i < details.length; i++){
+    for (let i = 0; i < details.data.length; i++){
         table = table + `<tr>
       <td>${i + 1}</td>
-      <td>${details[i].title}</td>
-      <td id="desc">${details[i].description}</td>
+      <td>${details.data[i].title}</td>
+      <td id="desc">${details.data[i].description}</td>
       <td><button type="button" class="btn btn-danger" onclick="deleteData(${i})"><i class="fa-solid fa-trash"></i></button></td>
     </tr> `;
     };
@@ -34,6 +36,7 @@ function table() {
     </table>`;
     document.getElementById("table").innerHTML = table;
 };
+
 table();
 
 //=============================================logout=================

@@ -50,18 +50,17 @@ nav button{
 .container{
     display: grid;
     grid-template-columns: 2fr 1fr;
-    margin: 5em;
+    margin: 3em;
     background-color: #eeeeee;
     padding: 3em;
     border-radius: 15px;
-    height: 80vh;
+    height: 60vh;
 }
 .container img{
     width:90vh;
-    height: 60vh;
+    height: 50vh;
 }
 .container p, h3, h4, ul{
-    color: white;
     padding: 0 .5em 1em 0;
 }
 .container h3{
@@ -72,7 +71,7 @@ nav button{
     font-size: 30px;
 }
 .social-icons{
-    margin-top: 1em;
+    margin-top: 10px;
     display: flex;
     padding-right: 4em;
 }
@@ -82,6 +81,22 @@ nav button{
 .text{
 padding: 3em 0 0 1em;
 }
+.icon{
+    display: flex;
+    align-items: center;
+  
+  }
+.icon p{
+    padding-top: 15px;
+  
+  }
+  .fa-solid{
+    color: black;
+    padding-right: 10px;
+  }
+#mark{
+    text-align: center;
+} 
 
 @media (max-width: 668px){
     .checkbtn{
@@ -107,16 +122,40 @@ padding: 3em 0 0 1em;
     nav ul li a{
         font-size: 20px;
     }
-    #check:checked ~ ul {
-        left: 0;
+    .container p, h3, h4, ul{
+        padding: 0 .5em 6px 0;
+    }
+    .social-icons{
+        margin-top: 3px;
+        display: flex;
+        padding-right: 4em;
+    }
+    .personal-text p{
+       margin-top: 5px;
+    }
+    .container{
+        display: grid;
+        grid-template-columns:1fr;
+        margin: 1em;
+        background-color: #eeeeee;
+        padding: 3em;
+        border-radius: 15px;
+        height: 70vh;
     }
     .text{
         font-size: 10px;
     }
     .container{
-        padding: 2em;
+        display: block;
     }
-}
+    .image img{
+        width: 100%;
+        height: 60%;
+      }
+
+    #check:checked ~ ul {
+        left: 0;
+}}
 @media (max-width: 414px){
     .checkbtn{
         display: block;
@@ -141,6 +180,27 @@ padding: 3em 0 0 1em;
     nav ul li a{
         font-size: 20px;
     }
+    
+    .container p, h3, h4, ul{
+        padding: 0 .5em 10px 0;
+    }
+    .social-icons{
+        margin-top: 30px;
+        display: flex;
+        padding-right: 4em;
+    }
+    .personal-text p{
+       margin-top: 5px;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        margin: 3em;
+        background-color: #eeeeee;
+        padding: 3em;
+        border-radius: 15px;
+        height: 83vh;
+    }
     #check:checked ~ ul {
         left: 0;
     }
@@ -150,6 +210,10 @@ padding: 3em 0 0 1em;
     .container{
         display: block;
     }
+    .image img{
+        width: 100%;
+        height: 70%;
+      }
 }
 [data-signedin = "true"] .hidden {
     display: none;
